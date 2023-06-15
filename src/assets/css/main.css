@@ -1,11 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,600;0,700;0,900;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,500;1,700&display=swap");
 html,
 body {
   accent-color: #e64b1c;
   color: #4d4d4d;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-weight: 500;
 }
 @media (max-width: 980px) {
   html,
@@ -31,34 +30,20 @@ a:hover {
   color: black;
 }
 
-.link-white {
-  color: white;
-}
-.link-white:hover {
-  color: black;
-}
-
-.font-medium {
-  font-weight: 500;
-  font-family: "Encode Sans Medium";
-}
-
-.font-bold {
-  font-family: "Encode Sans Bold";
-  font-weight: bold;
-}
-
-.font-semibold {
-  font-family: "Encode Sans SemiBold";
-  font-weight: 600;
-}
-
 .text-primary {
   color: #e64b1c;
 }
 
 .bg-primary {
   background-color: #e64b1c;
+}
+
+.bg-secondary {
+  background-color: #999999;
+}
+
+.bg-tertiary {
+  background-color: #666;
 }
 
 svg {
@@ -81,6 +66,14 @@ svg {
     opacity: 1;
   }
 }
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: white;
+}
+input::placeholder,
+textarea::placeholder {
+  color: white;
+}
+
 #nav-menu {
   cursor: pointer;
   width: 30px;
@@ -141,4 +134,12 @@ svg {
 }
 .indicators li button::before {
   background-color: white !important;
+}
+
+#stadistics {
+  background-image: url("/images/bg-stadistics.jpg");
+}
+
+hr {
+  border-color: #e64b1c;
 }/*# sourceMappingURL=main.css.map */

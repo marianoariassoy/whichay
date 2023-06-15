@@ -3,7 +3,7 @@ import { Instagram } from "../icons/MySvgs";
 
 const Social = () => {
   return (
-    <div className="fixed z-30 bottom-8 left-0 px-14 text-white">
+    <div className="absolute z-30 bottom-8 left-0 px-14 text-white">
       <ul className="social-nav flex gap-4 items-center">
         <li>
           <a href="https://www.facebook.com/" target="_blank">

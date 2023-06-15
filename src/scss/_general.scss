@@ -4,7 +4,7 @@ body {
   color: $text-color-primary;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-weight: 500;
+
   @media (max-width: 980px) {
     font-size: 14px;
   }
@@ -28,33 +28,20 @@ a {
     color: black;
   }
 }
-.link-white {
-  color: white;
-  &:hover {
-    color: black;
-  }
-}
 
 //Fonts
-
-.font-medium {
-  font-weight: 500;
-  font-family: "Encode Sans Medium";
-}
-.font-bold {
-  font-family: "Encode Sans Bold";
-  font-weight: bold;
-}
-.font-semibold {
-  font-family: "Encode Sans SemiBold";
-  font-weight: 600;
-}
 
 .text-primary {
   color: $color-primary;
 }
 .bg-primary {
   background-color: $color-primary;
+}
+.bg-secondary {
+  background-color: $color-secondary;
+}
+.bg-tertiary {
+  background-color: #666;
 }
 
 svg {
@@ -75,4 +62,9 @@ svg {
   100% {
     opacity: 1;
   }
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: white;
 }

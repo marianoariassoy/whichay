@@ -2,17 +2,14 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import BeatLoader from "react-spinners/BeatLoader";
-import type { DataContact } from "../types/types";
-
-const Error = () => {
-  return <div className="text-sm mb-4 mt-2">Por favor completá este campo</div>;
-};
+import { useDataContext } from "../context/useDataContext";
+import { dataContact } from "../data/Data";
 
 const Form = () => {
+  const { lan } = useDataContext();
   const [sended, setSended] = useState(false);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState(false);
-  1;
 
   const {
     register,
@@ -20,67 +17,70 @@ const Form = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data: DataContact) => {
+  const onSubmit = (data) => {
     setSending(true);
     const sender = {
-      to: " ",
-      from: "no-reply@thk-avalos.com",
-      from_name: "Salta OK",
+      to: "alejandracarpena.riica@gmail.com",
+      from: "no-reply@riica.com.ar",
+      from_name: "Riica Construcciones",
       subject: "Contacto",
     };
 
-    axios
-      .post("https://thk-avalos.com/backend/send-email.php", { ...data, ...sender })
-      .then((data) => {
-        if (data.data === "success") {
-          setSended(true);
-          setSending(false);
-        } else {
-          setError(true);
-          setSending(false);
-        }
-      })
-      .catch(() => {
+    axios.post("https://imltenis.com.ar/riicabackend/send-email.php", { ...data, ...sender }).then((data) => {
+      if (data.data === "success") {
+        setSended(true);
+        setSending(false);
+      } else {
         setError(true);
-        setSended(false);
-      });
+        setSending(false);
+      }
+    });
   };
 
-  const text = {
-    es: {
-      name: "Nombre y Apellido",
-      email: "E-Mail",
-      message: "Mensaje",
-      send: "Contactanos",
-      thanks: "Gracias por contactarte con nosotros.",
-      error: "Se produjo un error al enviar el mensaje :-(",
-    },
+  const Error = () => {
+    return <div className="text-sm font-medium mt-1 text-primary">{dataContact[lan].required}</div>;
   };
 
   return (
     <>
       {error ? (
-        <span className="text-xl font-bold">{text["es"].error}</span>
+        <span className="text-2xl font-bold">{dataContact[lan].error}</span>
       ) : sended ? (
-        <span className="text-xl font-bold">{text["es"].thanks}</span>
+        <span className="text-3xl font-bold">{dataContact[lan].thanks}</span>
       ) : (
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="mb-4">
-            <input {...register("name", { required: true })} placeholder={text["es"].name} className="w-full h-11 p-3  border rounded-md text-sm text-black" />
-            {errors.name && <Error />}
+          <div className="grid grid-cols-2 gap-4 font-light text-white">
+            <div>
+              <input className="w-full bg-secondary h-11 text-white px-4" placeholder={dataContact[lan].name} {...register("name", { required: true })} />
+              {errors.name && <Error />}
+            </div>
+            <div>
+              <input className="w-full bg-secondary h-11 text-white px-4" placeholder={dataContact[lan].city} {...register("city")} />
+            </div>
+            <div>
+              <input className="w-full bg-secondary h-11 text-white px-4" placeholder={dataContact[lan].email} {...register("email", { required: true })} />
+              {errors.email && <Error />}
+            </div>
+            <div>
+              <input className="w-full bg-secondary h-11 text-white px-4" placeholder={dataContact[lan].location} {...register("location")} />
+            </div>
+            <div>
+              <input className="w-full bg-secondary h-11 text-white px-4" placeholder={dataContact[lan].phone} {...register("phone", { required: true })} />
+              {errors.phone && <Error />}
+            </div>
+            <div>
+              <input className="w-full bg-secondary h-11 text-white px-4" placeholder={dataContact[lan].country} {...register("country")} />
+            </div>
           </div>
+          <textarea className="w-full bg-secondary h-44 text-white p-4 my-4 font-light" placeholder={dataContact[lan].message} {...register("message")} />
 
-          <div className="mb-4">
-            <input {...register("email", { required: true })} placeholder={text["es"].email} className="w-full h-11 p-3 border rounded-md text-sm text-black" />
-            {errors.email && <Error />}
-          </div>
-
-          <div className="mb-4">
-            <textarea {...register("message", { required: true })} className="w-full p-3 h-32 border rounded-md text-sm text-black" placeholder={text["es"].message} />
-            {errors.message && <Error />}
-          </div>
-
-          <div>{sending ? <BeatLoader /> : <button className="bg-primary rounded-md font-bold px-10 py-2 hover:text-white hover:bg-black">{text["es"].send}</button>}</div>
+          {sending ? (
+            <BeatLoader className="mt-6" />
+          ) : (
+            <button type="submit" className="font-bold bg-primary text-white h-11 hover:bg-black transition px-8">
+              {dataContact[lan].send}
+            </button>
+          )}
         </form>
       )}
     </>

@@ -44,7 +44,7 @@ const Slider = () => {
     image: string;
   };
 
-  return loading ? <Loader /> : <Slide {...properties}>{data && data.slice(0, 4).map((image: Image) => <SliderItem key={image.id} src={image.image} alt="Imagen de fondo" />)}</Slide>;
+  return loading ? <Loader /> : <Slide {...properties}>{data && data.slice(0, 4).map((image: Image) => <SliderItem key={image.id} src={image.image} alt="" />)}</Slide>;
 };
 
 export default Slider;
