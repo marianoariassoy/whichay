@@ -1,0 +1,12 @@
+.indicators {
+  bottom: 2rem;
+  position: absolute;
+  width: 100%;
+  z-index: 30;
+  li {
+    margin: 0 0.5rem !important;
+    button::before {
+      background-color: white !important;
+    }
+  }
+}

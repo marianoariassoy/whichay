@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-f8d6fe0d-3fba-47bb-a78b-063233172f37" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="24.4" height="13.7" viewBox="0 0 24.4 13.7">
+  <defs>
+    <style>
+      .uuid-eb3b14b0-1199-46f5-946b-d121a7a8f0e4 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="uuid-cb0b849f-e286-4b92-a64c-aac4ca520fff" data-name="Capa 1">
+    <polyline class="uuid-eb3b14b0-1199-46f5-946b-d121a7a8f0e4" points=".7 1 12.1 12.3 23.7 .7"/>
+  </g>
+</svg>
