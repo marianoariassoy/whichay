@@ -7,6 +7,7 @@ import Works from "../../components/Works";
 import Sustentability from "../../components/Sustentability";
 import News from "../../components/News";
 import Contact from "../../components/Contact";
+import Multimedia from "../../components/Multimedia";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <Works />
       <Sustentability />
       <News />
+      <Multimedia />
       <Contact />
     </Layout>
   );

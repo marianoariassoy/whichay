@@ -1,14 +1,11 @@
 import { useEffect } from "react";
-import { navItems } from "../data/Data";
-import { useDataContext } from "../context/useDataContext";
 import { Logo } from "../icons/MySvgs";
 import { Facebook } from "../icons/MySvgs";
 import { Instagram } from "../icons/MySvgs";
 import GsapScroll from "../utils/GsapScroll";
+import NavFooter from "./NavFooter";
 
 const Footer = () => {
-  const { lan } = useDataContext();
-
   useEffect(() => {
     GsapScroll();
   }, []);
@@ -16,15 +13,7 @@ const Footer = () => {
   return (
     <section className="bg-primary px-14 py-12 flex justify-between text-white text-sm">
       <div>
-        <ul className="font-medium">
-          {navItems.map((item, index) => (
-            <li key={index} className="mb-1">
-              <a href={item.url} className="menu-item">
-                {lan === "es" ? item.name : item.name_en}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <NavFooter />
       </div>
       <div className="flex flex-col justify-start items-end">
         <Logo />

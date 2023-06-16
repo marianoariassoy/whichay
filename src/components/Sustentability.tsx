@@ -12,7 +12,7 @@ const Sustentability = () => {
 
   return (
     <section id="sustentability">
-      <div className="container px-14 py-24 md:flex gap-8 items-center m-auto max-w-7xl">
+      <div className="container px-14 pb-24 pt-32 md:flex gap-8 items-center m-auto max-w-7xl">
         <div className="md:w-2/3 md:pr-16">
           <h1 className="text-4xl md:text-6xl font-bold text-primary mb-8">{lan === "es" ? "Sustentabilidad" : "Sustentability"}</h1>
           <p className="mb-8 text-wrap-balance">

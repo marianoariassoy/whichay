@@ -31,7 +31,7 @@ const Works = () => {
       ) : (
         <>
           <div className="absolute z-20">
-            <div className="container px-14 py-24 m-auto max-w-7xl text-white">
+            <div className="container px-14 pb-24 pt-32 m-auto max-w-7xl text-white">
               <h1 className="text-xl ">{lan === "es" ? "OBRAS" : "WORKS"}</h1>
             </div>
           </div>

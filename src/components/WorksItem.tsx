@@ -13,7 +13,7 @@ const WorksItem = ({ item }) => {
             <h1 className="font-bold text-4xl md:text-6xl mb-2">{item.title}</h1>
             <h2 className="font-medium text-xl md:text-3xl mb-8">Perico - Jujuy</h2>
             <Link to={`/obras/${item.id}`}>
-              <button className="bg-primary h-11 font-bold px-8 inline-block hover:bg-black hover:text-white transition-all">{lan === "es" ? "+VER MAS" : "+MORE"}</button>
+              <button className="bg-primary h-11 font-mediym px-12 inline-block hover:bg-black hover:text-white transition-all">{lan === "es" ? "+VER MAS" : "+MORE"}</button>
             </Link>
           </div>
         </div>
