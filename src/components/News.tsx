@@ -6,6 +6,7 @@ const News = () => {
 
   const news = [
     {
+      id: 1,
       title: "Movimiento de suelo en Perico",
       image: "https://images.pexels.com/photos/242492/pexels-photo-242492.jpeg?auto=compress&cs=tinysrgb&w=1600",
       date: "12/12/2021",
@@ -13,6 +14,7 @@ const News = () => {
     },
 
     {
+      id: 2,
       title: "Movimiento de suelo en Perico",
       image: "https://images.pexels.com/photos/2531552/pexels-photo-2531552.jpeg?auto=compress&cs=tinysrgb&w=1600",
       date: "12/12/2021",
@@ -20,6 +22,7 @@ const News = () => {
     },
 
     {
+      id: 3,
       title: "Movimiento de suelo en Perico",
       image: "https://images.pexels.com/photos/281451/pexels-photo-281451.jpeg?auto=compress&cs=tinysrgb&w=1600",
       date: "12/12/2021",
@@ -32,8 +35,8 @@ const News = () => {
       <div className="container px-14 pb-24 pt-32 m-auto max-w-7xl">
         <h1 className="text-5xl md:text-6xl font-bold mb-24">{lan === "es" ? "Novedades" : "News"}</h1>
         <div className="grid md:grid-cols-3 gap-14 items-start">
-          {news.map((article, index) => (
-            <NewsItem key={index} article={article} />
+          {news.map((article) => (
+            <NewsItem key={article.id} article={article} />
           ))}
         </div>
         <div className="flex justify-center mt-16">

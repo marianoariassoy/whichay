@@ -8,10 +8,23 @@ import Sustentability from "../../components/Sustentability";
 import News from "../../components/News";
 import Contact from "../../components/Contact";
 import Multimedia from "../../components/Multimedia";
+import { Helmet } from "react-helmet";
+import { useDataContext } from "../../context/useDataContext";
+import { useEffect } from "react";
 
 const Home = () => {
+  const { setHomeSection } = useDataContext();
+
+  useEffect(() => {
+    setHomeSection(true);
+  }, [setHomeSection]);
+
   return (
     <Layout>
+      <Helmet>
+        <title>Wichay Servicios</title>
+        <meta name="description" content="" />
+      </Helmet>
       <HomeSection />
       <About />
       <Stadistics />

@@ -9,7 +9,7 @@ type Props = {
 const Layout = ({ children }: Props) => {
   return (
     <>
-      <header className="fixed w-full z-40 text-white">
+      <header className="fixed w-full text-white z-40">
         <Header />
         <NavMobile />
       </header>
