@@ -5,7 +5,7 @@ import LogoContainer from "./LogoContainer";
 
 const Header = () => {
   return (
-    <section className="w-full px-16 py-8 flex justify-between items-center">
+    <section className="w-full px-14 py-8 flex justify-between items-center">
       <div>
         <LogoContainer />
       </div>
