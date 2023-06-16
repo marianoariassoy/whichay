@@ -17,7 +17,7 @@ const ImageComponent = ({ src, alt }: ImageComponentProps) => {
     };
   }, [src]);
 
-  return isLoading ? <Loader /> : <img src={src} alt={alt} className="fade-in w-full h-full" />;
+  return isLoading ? <Loader /> : <img src={src} alt={alt} className="fade-in w-full h-full object-cover" />;
 };
 
 export default ImageComponent;

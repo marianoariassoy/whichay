@@ -21,13 +21,13 @@ export const navItems = [
     id: 4,
     name: "Sustentabilidad",
     name_en: "Sustainability",
-    url: "#sustainability",
+    url: "#sustentability",
   },
   {
     id: 5,
     name: "Novedades",
     name_en: "News",
-    url: "#novedades",
+    url: "#news",
   },
   {
     id: 6,

@@ -6,13 +6,13 @@ const Lan = () => {
   return (
     <ul className="flex gap-1 items-center text-sm">
       <li>
-        <button className={`menu-item  ${lan === "es" && "opacity-50"}`} onClick={() => setLan("en")}>
+        <button className={`${lan === "es" && "opacity-50"}`} onClick={() => setLan("en")}>
           EN
         </button>
       </li>
       <li> - </li>
       <li>
-        <button className={`menu-item  ${lan === "en" && "opacity-50"}`} onClick={() => setLan("es")}>
+        <button className={`${lan === "en" && "opacity-50"}`} onClick={() => setLan("es")}>
           ES
         </button>
       </li>

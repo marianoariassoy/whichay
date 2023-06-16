@@ -1,11 +1,17 @@
+import { useEffect } from "react";
 import { navItems } from "../data/Data";
 import { useDataContext } from "../context/useDataContext";
 import { Logo } from "../icons/MySvgs";
 import { Facebook } from "../icons/MySvgs";
 import { Instagram } from "../icons/MySvgs";
+import GsapScroll from "../utils/GsapScroll";
 
 const Footer = () => {
   const { lan } = useDataContext();
+
+  useEffect(() => {
+    GsapScroll();
+  }, []);
 
   return (
     <section className="bg-primary px-14 py-12 flex justify-between text-white text-sm">

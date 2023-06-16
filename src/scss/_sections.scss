@@ -18,3 +18,10 @@
 hr {
   border-color: $color-primary;
 }
+
+.px-16 {
+  @media (max-width: 980px) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}

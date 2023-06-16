@@ -6,7 +6,7 @@ const Nav = () => {
 
   return (
     <nav className="hidden lg:block">
-      <ul className="flex gap-6 xl:gap-12 items-center text-sm font-medium">
+      <ul className="flex gap-6 xl:gap-12 items-center text-sm font-medium ">
         {navItems.map((item, index) => (
           <li key={index}>
             <a href={item.url} className="menu-item">

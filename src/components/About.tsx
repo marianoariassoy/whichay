@@ -1,18 +1,24 @@
+import { useEffect } from "react";
 import { useDataContext } from "../context/useDataContext";
+import ChangeHeaderColor from "../utils/ChangeHeaderColor";
 
 const About = () => {
   const { lan } = useDataContext();
 
+  useEffect(() => {
+    ChangeHeaderColor("#about");
+  }, []);
+
   return (
     <section id="about">
-      <div className="container px-14 py-24 flex gap-8 items-center m-auto max-w-7xl">
-        <div className="w-1/3">
-          <h1 className="text-7xl">
+      <div className="container px-14 py-24 md:flex gap-8 items-center m-auto max-w-7xl">
+        <div className="md:w-1/3">
+          <h1 className="text-5xl md:text-7xl my-4">
             <span className="font-light block">{lan === "es" ? "Somos" : "We Are"}</span>
             <span className="font-bold block text-primary">WICHAY</span>
           </h1>
         </div>
-        <div className="w-2/3">
+        <div className="md:w-2/3">
           <p className="text-xl mb-4 text-primary font-bold italic">Construimos porque nos apasiona el poder transformador de nuestra industria.</p>
           <p className="mb-8 text-wrap-balance">
             Nos motiva experimentar cómo una obra, sin importar su tamaño, incentiva el desarrollo de todo su entorno, generando crecimiento y evolución social. <br />

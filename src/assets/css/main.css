@@ -86,7 +86,7 @@ textarea::placeholder {
 }
 
 #nav-menu > span {
-  background-color: white;
+  background-color: currentColor;
   display: block;
   height: 1px;
   width: 30px;
@@ -142,4 +142,11 @@ textarea::placeholder {
 
 hr {
   border-color: #e64b1c;
+}
+
+@media (max-width: 980px) {
+  .px-16 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }/*# sourceMappingURL=main.css.map */
