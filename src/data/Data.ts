@@ -76,39 +76,39 @@ export const dataStadistics = [
 
 export const dataServices = [
   {
-    image: "icon1.svg",
+    image: 1,
     title: "Presupuestos",
     title_en: "Budgets",
     description: "Contamos con un equipo de profesionales abocados al estudio y análisis de costos de cada proyecto",
     description_en: "We have a team of professionals dedicated to the study and analysis of costs of each project",
   },
   {
-    image: "icon2.svg",
+    image: 2,
     title: "Asistencia Técnica y Asesoramiento",
     title_en: "Technical Assistance and Advice",
-    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    description_en: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    description: "Contamos con un equipo de profesionales abocados al estudio y análisis de costos de cada proyecto",
+    description_en: "We have a team of professionals dedicated to the study and analysis of costs of each project",
   },
   {
-    image: "icon3.svg",
+    image: 3,
     title: "Maquinarias y Equipos",
     title_en: "Machinery and Equipment",
-    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    description_en: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    description: "Contamos con un equipo de profesionales abocados al estudio y análisis de costos de cada proyecto",
+    description_en: "We have a team of professionals dedicated to the study and analysis of costs of each project",
   },
   {
-    image: "icon4.svg",
+    image: 4,
     title: "Transporte y Logística",
     title_en: "Transport and Logistics",
-    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    description_en: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    description: "Contamos con un equipo de profesionales abocados al estudio y análisis de costos de cada proyecto",
+    description_en: "We have a team of professionals dedicated to the study and analysis of costs of each project",
   },
   {
-    image: "icon5.svg",
+    image: 5,
     title: "Ejecución de Obras",
     title_en: "Execution of Works",
-    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    description_en: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    description: "Contamos con un equipo de profesionales abocados al estudio y análisis de costos de cada proyecto",
+    description_en: "We have a team of professionals dedicated to the study and analysis of costs of each project",
   },
 ];
 

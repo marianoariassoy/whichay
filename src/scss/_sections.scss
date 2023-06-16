@@ -29,3 +29,12 @@ hr {
 .news-gallery {
   height: 70vh;
 }
+
+.services-icon {
+  svg {
+    @media (max-width: 980px) {
+      // width: 40px;
+      height: 40px;
+    }
+  }
+}

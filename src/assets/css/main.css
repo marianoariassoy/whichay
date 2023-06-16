@@ -4,7 +4,7 @@
 @tailwind utilities;
 html,
 body {
-  accent-color: #000000;
+  accent-color: #e64b1c;
   color: #4d4d4d;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -162,4 +162,10 @@ hr {
 
 .news-gallery {
   height: 70vh;
+}
+
+@media (max-width: 980px) {
+  .services-icon svg {
+    height: 40px;
+  }
 }/*# sourceMappingURL=main.css.map */
