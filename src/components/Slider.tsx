@@ -20,7 +20,7 @@ const SliderItem = ({ src, alt }: SliderItemProps) => {
     };
   }, [src]);
 
-  return isLoading ? <Loader /> : <img src={src} alt={alt} className="fade-in h-screen w-screen object-cover" />;
+  return <div className="h-screen">{isLoading ? <Loader /> : <img src={src} alt={alt} className="fade-in h-full w-full object-cover" />}</div>;
 };
 
 type SliderProps = {
@@ -33,7 +33,7 @@ const Slider = () => {
 
   const properties = {
     arrows: false,
-    transitionDuration: 700,
+    transitionDuration: 900,
     pauseOnHover: false,
     autoplay: true,
     indicators: true,
