@@ -67,3 +67,28 @@ export const Whatsapp = () => {
     </svg>
   );
 };
+
+export const Down = () => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24.4" height="13.7" viewBox="0 0 24.4 13.7">
+      <polyline points=".7 1 12.1 12.3 23.7 .7" fill="none" stroke-miterlimit="10" stroke-width="2px" />
+    </svg>
+  );
+};
+
+export const Up = () => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24.4" height="13.7" viewBox="0 0 24.4 13.7">
+      <polyline points="23.7 12.8 12.3 1.4 .7 13" fill="none" stroke-miterlimit="10" stroke-width="2px" />
+    </svg>
+  );
+};
+
+export const Close = () => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="14.4" height="14.4" viewBox="0 0 14.4 14.4">
+      <line x1=".7" y1=".7" x2="13.7" y2="13.7" fill="none" stroke-miterlimit="10" stroke-width="2px" />
+      <line x1="13.7" y1=".7" x2=".7" y2="13.6" fill="none" stroke-miterlimit="10" stroke-width="2px" />
+    </svg>
+  );
+};

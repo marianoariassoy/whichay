@@ -52,6 +52,12 @@ a:hover {
 svg {
   fill: currentColor;
 }
+svg polyline {
+  stroke: currentColor;
+}
+svg line {
+  stroke: currentColor;
+}
 
 .text-wrap-balance {
   text-wrap: balance;

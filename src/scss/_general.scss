@@ -46,6 +46,12 @@ a {
 
 svg {
   fill: currentColor;
+  polyline {
+    stroke: currentColor;
+  }
+  line {
+    stroke: currentColor;
+  }
 }
 
 .text-wrap-balance {
