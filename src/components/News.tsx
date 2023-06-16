@@ -40,7 +40,7 @@ const News = () => {
           ))}
         </div>
         <div className="flex justify-center mt-16">
-          <button className="bg-tertiary h-11 font-medium px-12 inline-block hover:bg-black hover:text-white transition-all">{lan === "es" ? "+VER MAS" : "+MORE"}</button>
+          <button className="bg-tertiary h-11 font-medium px-12 inline-block hover:bg-black hover:text-white  hover:shadow-xl transition-all">{lan === "es" ? "+VER MAS" : "+MORE"}</button>
         </div>
       </div>
     </section>

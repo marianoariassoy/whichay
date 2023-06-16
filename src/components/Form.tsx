@@ -77,7 +77,7 @@ const Form = () => {
           {sending ? (
             <BeatLoader className="mt-6" />
           ) : (
-            <button type="submit" className="font-bold bg-primary text-white h-11 hover:bg-black transition px-8">
+            <button type="submit" className="font-bold bg-primary text-white h-11 hover:bg-black hover:shadow-xl transition px-8">
               {dataContact[lan].send}
             </button>
           )}
