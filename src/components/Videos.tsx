@@ -9,7 +9,7 @@ const Videos = () => {
 
   return (
     <>
-      <h1 className="text-5xl md:text-6xl font-bold text-primary mb-24">Videos</h1>
+      <h1 className="text-4xl md:text-6xl font-bold text-primary mb-16">Videos</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
         <VideosItem title="" setCurrentVideo={setCurrentVideo} video="https://www.youtube.com/watch?v=FhkFXiB34iI" image="https://images.pexels.com/photos/1870438/pexels-photo-1870438.jpeg?auto=compress&cs=tinysrgb&w=1600" />

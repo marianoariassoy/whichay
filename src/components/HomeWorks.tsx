@@ -14,7 +14,7 @@ const HomeWorks = () => {
       </div>
 
       <div className="absolute w-full h-full bg-black bg-opacity-40 z-10"></div>
-      <Slider />
+      <Slider autoplay={true} arrows={false} />
     </section>
   );
 };

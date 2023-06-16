@@ -10,7 +10,7 @@ const Home = () => {
 
       <div className="absolute w-full h-full bg-black bg-opacity-40 z-10"></div>
       <div className="h-screen">
-        <Slider />
+        <Slider autoplay={true} arrows={false} />
       </div>
     </section>
   );

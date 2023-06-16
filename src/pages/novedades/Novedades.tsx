@@ -22,7 +22,7 @@ const Novedades = () => {
         <meta name="description" content="" />
       </Helmet>
       <NewsDescription />
-      <Slider />
+      <Slider autoplay={false} arrows={true} />
     </Layout>
   );
 };

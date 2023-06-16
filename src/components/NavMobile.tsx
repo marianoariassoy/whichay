@@ -8,6 +8,7 @@ const NavMobile = () => {
   const closeMenu = () => {
     const menu = document.querySelector(".nav-mobile");
     menu.classList.add("hidden");
+    document.querySelector("#nav-menu").classList.toggle("active");
   };
 
   return (

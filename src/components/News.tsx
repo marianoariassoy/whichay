@@ -33,7 +33,7 @@ const News = () => {
   return (
     <section className="bg-secondary text-white" id="news">
       <div className="container px-14 pb-24 pt-32 m-auto max-w-7xl">
-        <h1 className="text-5xl md:text-6xl font-bold mb-24">{lan === "es" ? "Novedades" : "News"}</h1>
+        <h1 className="text-4xl md:text-6xl font-bold mb-16">{lan === "es" ? "Novedades" : "News"}</h1>
         <div className="grid md:grid-cols-3 gap-14 items-start">
           {news.map((article) => (
             <NewsItem key={article.id} article={article} />
