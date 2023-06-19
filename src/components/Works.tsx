@@ -4,16 +4,10 @@ import useFetch from "../hooks/useFetch";
 import Loader from "./Loader";
 import { useDataContext } from "../context/useDataContext";
 import WorksItem from "./WorksItem";
-import { useEffect } from "react";
-import { ObserverFunction } from "../utils/ChangeColor";
 
 const Works = () => {
   const { data, loading } = useFetch(`/proyectos`);
   const { lan } = useDataContext();
-
-  useEffect(() => {
-    ObserverFunction("#works");
-  }, []);
 
   const properties = {
     prevArrow: (
@@ -31,7 +25,7 @@ const Works = () => {
   };
 
   return (
-    <section className="relative h-full" id="works" data-color="white">
+    <section className="h-screen" id="works">
       {loading ? (
         <Loader />
       ) : (

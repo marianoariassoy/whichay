@@ -3,14 +3,11 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { dataStadistics } from "../data/Data";
 import { useDataContext } from "../context/useDataContext";
-import { ObserverFunction } from "../utils/ChangeColor";
 
 const Stadistics = () => {
   const { lan } = useDataContext();
 
   useEffect(() => {
-    ObserverFunction("#stadistics");
-
     gsap.registerPlugin(ScrollTrigger);
     gsap
       .timeline({
@@ -28,7 +25,7 @@ const Stadistics = () => {
   }, []);
 
   return (
-    <section className="relative bg-center bg-cover" id="stadistics" data-color="white">
+    <section className="relative bg-center bg-cover" id="stadistics">
       <div className="absolute z-10 right-14 -mt-10">
         <img src="/assets/iso1.svg" />
       </div>

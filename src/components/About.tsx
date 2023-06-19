@@ -1,16 +1,16 @@
 import { useEffect } from "react";
 import { useDataContext } from "../context/useDataContext";
-import { ObserverFunction } from "../utils/ChangeColor";
+import ChangeHeaderColor from "../utils/ChangeHeaderColor";
 
 const About = () => {
   const { lan } = useDataContext();
 
   useEffect(() => {
-    ObserverFunction("#about");
+    ChangeHeaderColor("#about");
   }, []);
 
   return (
-    <section id="about" data-color="#e64b1c">
+    <section id="about">
       <div className="container px-14 py-24 md:flex gap-8 items-center m-auto max-w-7xl">
         <div className="md:w-1/3">
           <h1 className="text-5xl md:text-7xl my-4">
