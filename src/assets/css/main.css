@@ -16,15 +16,14 @@ body {
   }
 }
 
-#root {
+/* #root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-#root main {
-  flex: 1;
-}
-
+  main {
+    flex: 1;
+  }
+} */
 a {
   transition: all 0.2s ease-in-out;
   color: currentColor;

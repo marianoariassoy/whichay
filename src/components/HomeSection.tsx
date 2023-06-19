@@ -1,10 +1,16 @@
 import Slider from "./Slider";
 import Social from "./Social";
 import WaComponent from "./WaComponent";
+import { ObserverFunction } from "../utils/ChangeColor";
+import { useEffect } from "react";
 
 const Home = () => {
+  useEffect(() => {
+    ObserverFunction("#home");
+  }, []);
+
   return (
-    <section className="relative h-screen overflow-hidden" id="home">
+    <section className="relative h-full overflow-hidden" id="home" data-color="white">
       <Social />
       <WaComponent />
 

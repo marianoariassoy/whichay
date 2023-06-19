@@ -1,8 +1,14 @@
 import { useDataContext } from "../context/useDataContext";
 import NewsItem from "./NewsItem";
+import { ObserverFunction } from "../utils/ChangeColor";
+import { useEffect } from "react";
 
 const News = () => {
   const { lan } = useDataContext();
+
+  useEffect(() => {
+    ObserverFunction("#novedades");
+  }, []);
 
   const news = [
     {
@@ -31,7 +37,7 @@ const News = () => {
   ];
 
   return (
-    <section className="bg-secondary text-white" id="news">
+    <section className="bg-secondary text-white" id="novedades" data-color="white">
       <div className="container px-14 pb-24 pt-32 m-auto max-w-7xl">
         <h1 className="text-4xl md:text-6xl font-bold mb-16">{lan === "es" ? "Novedades" : "News"}</h1>
         <div className="grid md:grid-cols-3 gap-14 items-start">

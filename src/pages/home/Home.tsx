@@ -25,15 +25,35 @@ const Home = () => {
         <title>Wichay Servicios</title>
         <meta name="description" content="" />
       </Helmet>
-      <HomeSection />
-      <About />
-      <Stadistics />
-      <Services />
-      <Works />
-      <Sustentability />
-      <News />
-      <Multimedia />
-      <Contact />
+      <div className="snap-y snap-mandatory h-screen top-0 overflow-auto">
+        <div className="snap-start">
+          <HomeSection />
+        </div>
+        <div className="snap-start">
+          <About />
+        </div>
+        <div className="snap-start">
+          <Stadistics />
+        </div>
+        <div className="snap-start">
+          <Services />
+        </div>
+        <div className="snap-start">
+          <Works />
+        </div>
+        <div className="snap-start">
+          <Sustentability />
+        </div>
+        <div className="snap-start">
+          <News />
+        </div>
+        <div className="snap-start">
+          <Multimedia />
+        </div>
+        <div className="snap-start">
+          <Contact />
+        </div>
+      </div>
     </Layout>
   );
 };
