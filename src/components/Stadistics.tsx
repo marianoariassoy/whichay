@@ -29,7 +29,7 @@ const Stadistics = () => {
       <div className="absolute z-10 right-14 -mt-10">
         <img src="/assets/iso1.svg" />
       </div>
-      <div className="container px-14 py-48 m-auto max-w-7xl grid grid-cols-2 gap-14 md:grid-cols-4 md:gap-24 text-white text-center items-start">
+      <div className="container px-14 py-32 m-auto max-w-7xl grid grid-cols-2 gap-14 md:grid-cols-4 md:gap-24 text-white text-center items-start">
         {dataStadistics.map((item, index) => (
           <article className="font-semibold flex flex-col justify-center gap-4 md:gap-6" key={index}>
             <h3>{lan === "es" ? item.title : item.title_en}</h3>

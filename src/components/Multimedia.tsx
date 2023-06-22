@@ -1,11 +1,19 @@
 import { useEffect } from "react";
 import Videos from "./Videos";
-import ChangeHeaderColor from "../utils/ChangeHeaderColor";
 import Slider from "./Slider";
+import useFetch from "../hooks/useFetch";
+import { changeColor } from "../utils/headerColor";
+
+type DataProps = {
+  data: null | Array<{ id: number; image: string }>;
+  loading: boolean;
+};
 
 const Multimedia = () => {
+  const { data, loading } = useFetch(`/fotos`) as DataProps;
+
   useEffect(() => {
-    ChangeHeaderColor("#multimedia");
+    changeColor("#multimedia");
   }, []);
 
   return (
@@ -17,7 +25,7 @@ const Multimedia = () => {
         </div>
       </section>
       <section className="relative h-screen" id="gallery">
-        <Slider autoplay={false} arrows={true} />
+        {!loading && <Slider data={data} autoplay={false} arrows={true} />}
       </section>
     </>
   );

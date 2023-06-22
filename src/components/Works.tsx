@@ -6,8 +6,8 @@ import { useDataContext } from "../context/useDataContext";
 import WorksItem from "./WorksItem";
 
 const Works = () => {
-  const { data, loading } = useFetch(`/proyectos`);
   const { lan } = useDataContext();
+  const { data, loading } = useFetch(`/obras/${lan}`);
 
   const properties = {
     prevArrow: (

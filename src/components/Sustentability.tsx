@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import ImageComponent from "./ImageComponent";
 import { useDataContext } from "../context/useDataContext";
-import ChangeHeaderColor from "../utils/ChangeHeaderColor";
+import { changeColor } from "../utils/headerColor";
 
 const Sustentability = () => {
   const { lan } = useDataContext();
 
   useEffect(() => {
-    ChangeHeaderColor("#sustentability");
+    changeColor("#sustentability");
   }, []);
 
   return (

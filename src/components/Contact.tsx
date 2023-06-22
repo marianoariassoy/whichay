@@ -1,13 +1,12 @@
 import { useEffect } from "react";
 import Form from "./Form";
 import { useDataContext } from "../context/useDataContext";
-import ChangeHeaderColor from "../utils/ChangeHeaderColor";
+import { changeColor } from "../utils/headerColor";
 
 const Contact = () => {
   const { lan } = useDataContext();
-
   useEffect(() => {
-    ChangeHeaderColor("#contact");
+    changeColor("#contact");
   }, []);
 
   return (

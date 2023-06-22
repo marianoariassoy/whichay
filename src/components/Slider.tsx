@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import Loader from "./Loader";
-import useFetch from "../hooks/useFetch";
 
 type SliderItemProps = {
   src: string;
@@ -23,19 +22,13 @@ const SliderItem = ({ src, alt }: SliderItemProps) => {
   return <div className="h-screen">{isLoading ? <Loader /> : <img src={src} alt={alt} className="fade-in h-full w-full object-cover" />}</div>;
 };
 
-type DataProps = {
-  data: null | Array<{ id: number; image: string }>;
-  loading: boolean;
-};
-
 type SliderComponentProps = {
+  data: Array<{ id: number; image: string }>;
   arrows: boolean;
   autoplay: boolean;
 };
 
-const Slider = ({ arrows, autoplay }: SliderComponentProps) => {
-  const { data, loading } = useFetch(`/imagenes`) as DataProps;
-
+const Slider = ({ data, arrows, autoplay }: SliderComponentProps) => {
   const properties = {
     prevArrow: (
       <button className="ml-6">
@@ -58,7 +51,11 @@ const Slider = ({ arrows, autoplay }: SliderComponentProps) => {
     image: string;
   };
 
-  return <div className="relative h-full w-full">{loading ? <Loader /> : <Slide {...properties}>{data && data.slice(0, 4).map((image: Image) => <SliderItem key={image.id} src={image.image} alt="" />)}</Slide>}</div>;
+  return (
+    <div className="relative h-full w-full">
+      <Slide {...properties}>{data && data.map((image: Image) => <SliderItem key={image.id} src={image.image} alt="" />)}</Slide>
+    </div>
+  );
 };
 
 export default Slider;

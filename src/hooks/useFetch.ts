@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-const apiUrl = "https://imltenis.com.ar/riicabackend/api";
+const apiUrl = "http://localhost/sites/wichay-backend/api";
 import axios from "axios";
 
 type Data = string;
