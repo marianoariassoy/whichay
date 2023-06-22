@@ -10,7 +10,6 @@ const Services = () => {
 
   if (!loading) {
     ScrollTrigger.refresh(true);
-    console.log("refresh");
   }
 
   return (

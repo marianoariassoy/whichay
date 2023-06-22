@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-const apiUrl = "http://localhost/sites/wichay-backend/api";
+const apiUrl = "http://wichay.com.ar/backend/api";
 import axios from "axios";
 
 type Data = string;

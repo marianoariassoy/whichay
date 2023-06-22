@@ -7,7 +7,7 @@ import useFetch from "../hooks/useFetch";
 
 const Videos = () => {
   const { lan } = useDataContext();
-  const { data, loading } = useFetch(`/videos/`);
+  const { data, loading } = useFetch(`/videos`);
   const [visible, setVisible] = useState(3);
   const [currentVideo, setCurrentVideo] = useState(null);
 
