@@ -10,7 +10,7 @@ const NavFooter = () => {
       {homeSection &&
         navItems.map((item, index) => (
           <li key={index} className="mb-1">
-            <a href={item.url} className="menu-scroll">
+            <a href={item.url} className="menu-item">
               {lan === "es" ? item.name : item.name_en}
             </a>
           </li>
