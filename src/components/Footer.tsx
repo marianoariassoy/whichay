@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Logo } from "../icons/MySvgs";
-import { Facebook } from "../icons/MySvgs";
-import { Instagram } from "../icons/MySvgs";
+// import { Facebook } from "../icons/MySvgs";
+// import { Instagram } from "../icons/MySvgs";
 import NavFooter from "./NavFooter";
 import pageScroll from "../utils/pageScroll";
 import { useDataContext } from "../context/useDataContext";
