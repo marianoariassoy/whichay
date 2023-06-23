@@ -21,7 +21,7 @@ const Footer = () => {
       <div className="flex flex-col justify-start items-end">
         <Logo />
 
-        <ul className="flex gap-4 items-center mt-12">
+        {/* <ul className="flex gap-4 items-center mt-12">
           <li>
             <a href="https://www.facebook.com/" target="_blank">
               <Facebook />
@@ -32,7 +32,7 @@ const Footer = () => {
               <Instagram />
             </a>
           </li>
-        </ul>
+        </ul> */}
       </div>
     </section>
   );

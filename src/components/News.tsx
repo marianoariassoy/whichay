@@ -22,7 +22,7 @@ const News = () => {
         ) : (
           <>
             <div className="grid md:grid-cols-3 gap-14 items-start">
-              {data.map((article) => (
+              {data.slice(0, visible).map((article) => (
                 <NewsItem key={article.id} article={article} />
               ))}
             </div>
