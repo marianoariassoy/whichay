@@ -20,13 +20,13 @@ const Form = () => {
   const onSubmit = (data) => {
     setSending(true);
     const sender = {
-      to: "alejandracarpena.riica@gmail.com",
-      from: "no-reply@riica.com.ar",
-      from_name: "Riica Construcciones",
+      to: "info@wichay.com.ar",
+      from: "no-reply@wichay.com.ar",
+      from_name: "Wichay",
       subject: "Contacto",
     };
 
-    axios.post("https://imltenis.com.ar/riicabackend/send-email.php", { ...data, ...sender }).then((data) => {
+    axios.post("https://wichay.com.ar/backend/send-email.php", { ...data, ...sender }).then((data) => {
       if (data.data === "success") {
         setSended(true);
         setSending(false);
