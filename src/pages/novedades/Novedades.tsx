@@ -29,7 +29,9 @@ const Novedades = () => {
         <meta name="description" content="" />
       </Helmet>
       {loading ? (
-        <Loader />
+        <div className="h-screen">
+          <Loader />
+        </div>
       ) : (
         <>
           <NewsDescription title={data[0].title} text_top={data[0].text_top} text={data[0].text} date={data[0].date} />

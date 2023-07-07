@@ -43,7 +43,7 @@ const Nav = () => {
           {homeSection &&
             navItems.map((item, index) => (
               <li key={index}>
-                <a href={item.url} className="menu-item">
+                <a href={item.target} className="menu-item">
                   {lan === "es" ? item.name : item.name_en}
                 </a>
               </li>
@@ -52,7 +52,7 @@ const Nav = () => {
           {!homeSection &&
             navItems.map((item, index) => (
               <li key={index}>
-                <Link to="/">{lan === "es" ? item.name : item.name_en}</Link>
+                <Link to={item.url}>{lan === "es" ? item.name : item.name_en}</Link>
               </li>
             ))}
         </ul>

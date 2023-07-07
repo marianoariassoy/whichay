@@ -8,9 +8,16 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home target="home" />} />
         <Route path="/obras/:id" element={<Obras />} />
         <Route path="/novedades/:id" element={<Novedades />} />
+        <Route path="/somos-wichay" element={<Home target="about" />} />
+        <Route path="/servicios" element={<Home target="services" />} />
+        <Route path="/obras" element={<Home target="works" />} />
+        <Route path="/sustentabilidad" element={<Home target="sustentability" />} />
+        <Route path="/novedades" element={<Home target="news" />} />
+        <Route path="/multimedia" element={<Home target="multimedia" />} />
+        <Route path="/contacto" element={<Home target="contact" />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>

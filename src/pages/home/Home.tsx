@@ -12,12 +12,20 @@ import { Helmet } from "react-helmet";
 import { useDataContext } from "../../context/useDataContext";
 import { useEffect } from "react";
 
-const Home = () => {
-  const { setHomeSection } = useDataContext();
+type HomeProps = {
+  target: string;
+};
 
+const Home = ({ target }: HomeProps) => {
+  const { setHomeSection } = useDataContext();
   useEffect(() => {
     setHomeSection(true);
-  }, [setHomeSection]);
+    const targetElement = document.querySelector(`#${target}`) as HTMLElement;
+    window.scrollTo({
+      top: targetElement.offsetTop,
+      behavior: "smooth",
+    });
+  }, [target, setHomeSection]);
 
   return (
     <Layout>
